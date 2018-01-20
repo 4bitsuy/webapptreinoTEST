@@ -1,0 +1,16 @@
+{
+    "name": "treino/cms",
+    "description": "Wordpress cms",
+    "type": "proyecto",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "4bits",
+            "email": "4bitsuy@gmail.com"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^4.9",
+        "vlucas/phpdotenv": "^2.4"
+    }
+}
