@@ -177,7 +177,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Corcel\Laravel\CorcelServiceProvider::class,
+        /* 4bits: Agregador por terceros */
+        Corcel\Laravel\CorcelServiceProvider::class, // conexion con wordpress
+        Lavary\Menu\ServiceProvider::class, // para crear menus.
 
     ],
 
@@ -227,7 +229,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Menu' => Lavary\Menu\Facade::class,
     ],
 
 ];
