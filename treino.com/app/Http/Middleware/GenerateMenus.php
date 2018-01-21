@@ -16,10 +16,12 @@ class GenerateMenus
     public function handle($request, Closure $next)
     {
         \Menu::make('NavBar', function ($menu) {
-            $menu->add('HOME');
-            $menu->add('ESCUELA', 'escuela');
-            $menu->add('CURSOS', 'cursos');
-            $menu->add('CONTACTO', 'contactO');
+            $menu->add('HOME', ['route'  => 'home', 'id' => 'home']);
+            $menu->add('ESCUELA', ['route'  => 'escuela.principal', 'id' => 'escuela']);
+            $menu->add('CURSOS', ['route'  => 'cursos.principal', 'id' => 'cursos']);
+            $menu->add('CONTACTO', ['route'  => 'contacto.principal', 'id' => 'contacto']);
         });
+
+        return $next($request);
     }
 }
