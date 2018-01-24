@@ -1,0 +1,49 @@
+div.staff{
+  background-color: $blue-bg;
+  padding-bottom: 150px;
+  h3{
+    margin-top: 55px;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: $white-color;
+  }
+  h5{
+    font-size: 18px;
+    color: $red-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .one-person{
+    background: $red-color;
+    min-height: 400px;
+    margin:0 5px;
+    padding: 35px;
+    p{
+      text-align: justify;
+      color: $white-color;
+      font-size: 13px;
+      line-height: 17px;
+    }
+  }
+  h6{
+    text-align: left;
+    color: $white-color;
+    padding-left: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 50%;
+    span{
+      color: $red-color;
+      font-weight: $font-sans-bold;
+    }
+    img.img-staff{
+      position: absolute;
+      border-radius: 50%;
+      max-width: 140px;
+      bottom: -40;
+      right: 35;
+      border: 5px solid #fff;
+    }
+  }
+}

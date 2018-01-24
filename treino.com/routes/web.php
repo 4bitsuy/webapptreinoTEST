@@ -27,3 +27,8 @@ Route::get('contacto', [
   'as'    => 'contacto.principal',
   'uses'  => 'ContactoController@index'
 ]);
+
+Route::get('blog/{entrada}', [
+  'as'    => 'blog.nota',
+  'uses'  => 'BlogController@index'
+]);

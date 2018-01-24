@@ -1,0 +1,32 @@
+nav.navbar-default{
+  @include nav
+  ul{
+    li{
+      a{
+        color: $white-color!important;
+        font-family: $font-family;
+        font-weight: $font-sans-bold;
+        font-size: 14px;
+      }
+      a:hover{
+        color: $red-color!important;
+        text-decoration: underline;
+      }
+    }
+    li.active{
+      a{
+        background-color: transparent!important;
+        color: $red-color!important;
+      }
+    }
+  }
+  // for mobile
+  .navbar-default .navbar-toggle .icon-bar{
+    background-color: $red-color;
+
+  }
+  .navbar-toggle:hover,
+  .navbar-toggle:focus{
+    background-color: transparent!important;
+  }
+}

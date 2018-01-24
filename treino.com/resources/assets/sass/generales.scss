@@ -1,0 +1,35 @@
+body{
+  background-color: $blue-bg;
+}
+body,h1,h2,h3,h4,h5,h6,p{
+  font-family: $font-family;
+  color: $white-color;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: $font-sans-bold;
+}
+h3{
+  font-size: 28px;
+}
+header.nav-contact{
+  height: 30px;
+  color: $red-color;
+  background: $white-color;
+  div{
+    font-weight: $font-sans-bold;
+    line-height: 30px;
+    margin-left: 15px;
+    display: inline-block;
+  }
+}
+footer{
+  background: $red-color;
+  color: $white-color;
+  padding: 5px;
+  span{
+    opacity: .6;
+  }
+  .img-copyright{
+    max-width: 15px;
+  }
+}

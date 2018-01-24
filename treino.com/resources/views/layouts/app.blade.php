@@ -3,27 +3,45 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
         <title>Treino - @yield('title')</title>
 
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+
     </head>
     <body>
+
+        <header class="hidden-xs container-fluid nav-contact">
+          <div class="container">
+            <div class="phone"><span class="glyphicon glyphicon-earphone"></span> +(000) 987-6543</div>
+            <div class="mail"><span class="glyphicon glyphicon-envelope"></span> info@treino.com.uy</div>
+          </div>
+        </header>
         @include(config('laravel-menu.views.bootstrap-items'), ['items' => $NavBar->roots()])
 
-        <div class="container">
+        <section class="page">
             @yield('content')
+        </section>
+
+        <div class="inscripcion container-fluid hidden-xs">
+          <div class="container">
+            <h5>
+              Pagá la inscripción a tus cursos de forma sencilla y online
+              <a href="#" class="btn btn-inscribite pull-right">En este sitio!</a>
+            </h5>
+          </div>
         </div>
 
+        <section class="pie container">
+            @yield('pie')
+        </section>
 
+        <footer class="container-fluid">
+          <div class="container">
+            <span>Desarrollado por <a href="#"> <img src="images/4bits.png" alt="" class="img-copyright"></a></span>
+          </div>
+        </footer>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
