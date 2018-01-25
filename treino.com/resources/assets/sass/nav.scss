@@ -1,12 +1,13 @@
 nav.navbar-default{
   @include nav
   ul{
+    margin-top: 25px;
     li{
       a{
         color: $white-color!important;
         font-family: $font-family;
         font-weight: $font-sans-bold;
-        font-size: 14px;
+        font-size: 17px;
       }
       a:hover{
         color: $red-color!important;
