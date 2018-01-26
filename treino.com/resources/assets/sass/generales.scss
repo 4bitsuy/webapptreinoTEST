@@ -22,6 +22,31 @@ header.nav-contact{
     display: inline-block;
   }
 }
+div.inscripcion{
+  background-color: $red-color;
+  color: $white-color;
+  h5{
+    font-weight: $font-sans-bold;
+    @include media(sm){
+      padding-right: 200px;
+    }
+    font-size: 28px;
+    padding: 35px 30px;
+    a.btn-inscribite{
+      border: 2px solid $white-color;
+      border-radius: 0;
+      color: $white-color;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 5px 30px;
+      @include media(sm){
+        position: absolute;
+        margin-top: -23px;
+        right: 35px;
+      }
+    }
+  }
+}
 footer{
   background: $red-color;
   color: $white-color;

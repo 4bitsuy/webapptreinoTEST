@@ -1,6 +1,13 @@
 div.staff{
-  background-color: $blue-bg;
-  padding-bottom: 150px;
+  @include media(xxs){
+    padding-bottom: 20px;
+  }
+  @include media(sm){
+    padding-bottom: 100px;
+  }
+  @include media(md){
+    padding-bottom: 150px;
+  }
   h3{
     margin-top: 55px;
     font-size: 32px;
@@ -16,9 +23,21 @@ div.staff{
   }
   .one-person{
     background: $red-color;
-    min-height: 400px;
-    margin:0 5px;
-    padding: 35px;
+    transition: .3 all;
+    @include media(xxs){
+      margin: 0 -30px;
+      padding: 20px;
+    }
+    @include media(sm){
+      margin: 0 -9px;
+      padding: 15px;
+      min-height: 460px;
+    }
+    @include media(md){
+      margin:0 5px;
+      padding: 35px;
+      min-height: 400px;
+    }
     p{
       text-align: justify;
       color: $white-color;
@@ -33,17 +52,42 @@ div.staff{
     font-size: 14px;
     letter-spacing: 1px;
     width: 50%;
+    @include media(xxs){
+      min-height: 60px;
+    }
+    @include media(sm){
+      min-height: 60px;
+    }
+    @include media(md){
+      min-height: 45px;
+    }
+
     span{
       color: $red-color;
       font-weight: $font-sans-bold;
     }
     img.img-staff{
-      position: absolute;
       border-radius: 50%;
-      max-width: 140px;
-      bottom: -40;
-      right: 35;
-      border: 5px solid #fff;
+      position: absolute;
+      border-color: #fff;
+      @include media(xxs){
+        max-width: 80px;
+        border: 2px solid;
+        bottom: 10px;
+        right: 0;
+      }
+      @include media(sm){
+        max-width: 95px;
+        border: 3px solid;
+        bottom: 8px;
+        right: 15px;
+      }
+      @include media(md){
+        max-width: 140px;
+        border: 5px solid;
+        bottom: -40px;
+        right: 35px;
+      }
     }
   }
 }

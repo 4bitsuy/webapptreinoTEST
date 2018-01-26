@@ -8,6 +8,7 @@ nav.navbar-default{
         font-family: $font-family;
         font-weight: $font-sans-bold;
         font-size: 17px;
+        transition: .3s all;
       }
       a:hover{
         color: $red-color!important;

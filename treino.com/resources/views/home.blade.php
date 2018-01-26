@@ -4,6 +4,30 @@
 @section('title', 'Inicio')
 
 @section('content')
+<div class="cursos-cortos container-fluid">
+  <h3>cursos <span>cortos</span></h3>
+
+  <button type="button" name="button" id="mas-cursos" class="ver-mas"></button>
+</div>
+<div id="id-cursos" class="cursos">
+  <div id="1" class="img-curso" style="background: url(images/curso.jpg) center center;">
+    PRUEBA
+  </div>
+  <div id="2" class="img-curso" style="background: url(images/curso.jpg) center center;">
+    PRUEBA
+  </div>
+  <div id="3" class="img-curso" style="background: url(images/curso.jpg) center center;">
+    PRUEBA
+  </div>
+  <div id="4" class="img-curso" style="background: url(images/curso.jpg) center center;">
+    PRUEBA
+  </div>
+  <div id="5" class="img-curso" style="background: url(images/curso.jpg) center center;">
+    PRUEBA
+  </div>
+</div>
+
+
 <div id="inicio" class="inicio container-fluid">
   <div class="container">
     <div class="col-lg-12">
@@ -32,7 +56,7 @@
       <h5>Contamos con un equipo de reconocidos docentes</h5>
 
       @for ($i = 1; $i <= 3; $i++)
-        <div class="col-md-4">
+        <div class="col-sm-4">
           <div class="one-person">
             {!! array_get($staffData, 'staff_'.$i.'.contenido') !!}
           </div>
@@ -49,7 +73,7 @@
 @endsection
 
 @section('pie')
-  <div class="col-md-4 text-left">
+  <div class="pie-cont col-sm-4 text-left">
     <h4>BLOG</h4>
     <ul class="blog">
       @foreach ($entradas as $entrada)
@@ -72,7 +96,7 @@
       @endforeach
     </ul>
   </div>
-  <div class="col-md-4 text-center">
+  <div class="pie-cont col-sm-4 text-center">
     <img src="images/logo-pie.png" alt="" class="img-responsive img-logo-pie">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     <div class="block-social">
@@ -81,7 +105,7 @@
       <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
     </div>
   </div>
-  <div class="col-md-4 text-center">
+  <div class="pie-cont col-sm-4 text-center">
     OPINIONES
   </div>
 @endsection

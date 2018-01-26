@@ -1,8 +1,13 @@
+@import "tira-cursos";
+
 div.inicio{
   background: url($source-img+"bg-one.jpg") left center;
   background-size: cover;
   margin-top: -23px;
   padding-top: 23px;
+  @include media(sm){
+    background-position: right center
+  }
   h3,p,ul{
     max-width: 480px;
     color: $white-color;
@@ -29,16 +34,24 @@ div.inicio{
     border-radius: 0!important;
     color: $white-color!important;
     font-weight: $font-sans-bold;
-    font-size: 18px;
     letter-spacing: 1px;
     margin-top: 50px;
     margin-bottom: 130px;
     padding: 8px 28px;
+    @include media(xxs){
+      font-size: 14px;
+    }
+    @include media(sm){
+      font-size: 18px;
+    }
   }
   img.icono-home{
     padding-top: 20px;
     position: absolute;
     max-width: 100px;
+    @include media(xxs){
+      max-width: 70px;
+    }
   }
   .cont-home{
     margin-left: 125px;
@@ -49,25 +62,17 @@ div.inicio{
       font-size: 16px;
       letter-spacing: 1px;
     }
+    @include media(xxs){
+      margin-left: 90px;
+      font-size: 11px;
+    }
+    @include media(xs){
+      font-size: 13px;
+    }
+    @include media(sm){
+      font-size: 15px;
+    }
   }
 }
 
 @import "staff-home";
-
-div.inscripcion{
-  background-color: $red-color;
-  color: $white-color;
-  h5{
-    font-weight: $font-sans-bold;
-    font-size: 28px;
-    padding: 35px 30px;
-    a.btn-inscribite{
-      border: 2px solid $white-color;
-      border-radius: 0;
-      color: $white-color;
-      font-weight: 700;
-      letter-spacing: 1px;
-      padding: 5px 30px;
-    }
-  }
-}

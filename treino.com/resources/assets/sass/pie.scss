@@ -1,5 +1,13 @@
 .pie{
-  padding: 80px 0;
+  div.pie-cont{
+    @include media(xxs){
+      padding: 18px 0;
+    }
+  }
+  @include media(sm){
+    padding: 80px 0;
+  }
+
   img.img-logo-pie{
     max-width: 180px;
     margin: 0 auto 50px;
@@ -25,8 +33,8 @@
       }
       img{
         position: absolute;
-        max-width: 80px;
-        max-height: 80px;
+        width: 70px;
+        height: 60px;
         margin-left: -90px;
         margin-top: -55px;
       }

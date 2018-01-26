@@ -1,0 +1,50 @@
+div.cursos-cortos{
+  border-bottom: 4px solid #fff;
+  background: #fff;
+  margin-top: -22px;
+  margin-bottom: 20px;
+  @include media(xxs){
+    min-height: 275px;
+  }
+  @include media(xs){
+    min-height: 410px;
+  }
+  h3{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    color: $blue-bg;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: 3px;
+    font-weight: 300;
+    margin-left: -13px;
+    span{
+      font-weight: 700;
+    }
+  }
+  .ver-mas{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+div.img-curso{
+  background-size: cover;
+  position: absolute;
+  top: 103px;
+  width: 88%;
+  right: 0;
+  height: 50px;
+  transition: .5s all;
+  @include media(xxs){
+    padding-bottom: 270px;
+  }
+  @include media(xs){
+    padding-bottom: 400px;
+  }
+  @include media(md){
+    top: 133px;
+    width: 460px;
+  }
+}

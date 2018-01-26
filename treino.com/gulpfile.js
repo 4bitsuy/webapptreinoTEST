@@ -36,6 +36,12 @@ var scss = {
     }
 };
 
+var javascript = {
+  in: source + 'js/*.js',
+  out: dest + 'js/',
+  concat: 'main.js'
+}
+
 // copy bootstrap required fonts to dest
 gulp.task('fonts', function () {
     return gulp
@@ -50,7 +56,20 @@ gulp.task('sass', ['fonts'], function () {
         .pipe(gulp.dest(scss.out));
 });
 
+// compile js
+gulp.task('js', function () {
+    gulp.src(javascript.in)
+    .pipe(concat(javascript.concat))
+    .pipe(uglify())
+    .pipe(gulp.dest(javascript.out));
+});
+
 // default task
 gulp.task('default', ['sass'], function () {
      gulp.watch(scss.watch, ['sass']);
+});
+
+// default task
+gulp.task('espera', ['js'], function () {
+     gulp.watch(scss.watch, ['js']);
 });
