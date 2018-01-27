@@ -20,13 +20,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', $_ENV['DB_NAME']);
+define('DB_NAME', 'treinoco_treinoapp');
 
 /** MySQL database username */
-define('DB_USER', $_ENV['DB_USER']);
+define('DB_USER', 'admin');
 
 /** MySQL database password */
-define('DB_PASSWORD', $_ENV['DB_PASSWORD']);
+define('DB_PASSWORD', 'admin');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -38,9 +38,9 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
 /** Config the front-end url */
-define('WP_HOME', $_ENV['WP_HOME']);
+//define('WP_HOME', $_ENV['WP_HOME']);
 /** Config the cms url */
-define('WP_SITEURL', $_ENV['WP_SITEURL']);
+//define('WP_SITEURL', $_ENV['WP_SITEURL']);
 
 /**#@+
  * Authentication Unique Keys and Salts.
