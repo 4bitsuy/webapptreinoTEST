@@ -17,9 +17,20 @@ class GenerateMenus
     {
         \Menu::make('NavBar', function ($menu) {
             $menu->add('HOME', ['route'  => 'home', 'id' => 'home']);
-            $menu->add('ESCUELA', ['route'  => 'escuela.principal', 'id' => 'escuela']);
-            $menu->add('CURSOS', ['route'  => 'cursos.principal', 'id' => 'cursos']);
-            $menu->add('CONTACTO', ['route'  => 'contacto.principal', 'id' => 'contacto']);
+
+            $menu->add('ESCUELA', ['id' => 'escuela'])->link->href('#section-escuela');
+            $menu->add('CURSOS', ['route'  => 'cursos.principal',
+                                  'id' => 'cursos']);
+            /*
+            $menu->add('BLOG', ['route'  => 'blog.principal',
+                                'id' => 'blog'])->active('blog/*');
+            */
+            $menu->add('CONTACTO', ['id' => 'contacto'])
+                 ->attr([
+                   'data-toggle' => 'modal',
+                   'data-target' =>'#section-contacto',
+                    ])
+                  ->link->href('#');;
         });
 
         return $next($request);

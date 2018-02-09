@@ -180,6 +180,7 @@ return [
         /* 4bits: Agregador por terceros */
         Corcel\Laravel\CorcelServiceProvider::class, // conexion con wordpress
         Lavary\Menu\ServiceProvider::class, // para crear menus.
+        Laracasts\Utilities\JavaScript\JavaScriptServiceProvider::class // para levantar datos de javascript.
 
     ],
 

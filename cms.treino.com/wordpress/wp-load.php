@@ -16,11 +16,6 @@
  * @package WordPress
  */
 
-/** Set up dotenv **/
-require dirname(__DIR__).'/vendor/autoload.php';
-$dotenv = new Dotenv\Dotenv(dirname(__DIR__));
-$dotenv->load();
-
 /** Define ABSPATH as this file's directory */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' );

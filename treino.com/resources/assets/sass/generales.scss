@@ -58,3 +58,59 @@ footer{
     max-width: 15px;
   }
 }
+.btn-contacto{
+  background: $red-color!important;
+  border-radius: 0!important;
+  color: $white-color!important;
+  font-weight: $font-sans-bold;
+  letter-spacing: 1px;
+  margin-top: 50px;
+  margin-bottom: 130px;
+  padding: 8px 28px;
+  @include media(xxs){
+    font-size: 14px;
+  }
+  @include media(sm){
+    font-size: 18px;
+  }
+}
+
+.msg{
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  right: 15px;
+}
+
+.form-group{
+  margin-bottom: 25px;
+  .form-control{
+    background-color: #08141c;
+    border: none;
+    border-radius: 3px;
+    color: $white-color;
+    height: 28px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  textarea.form-control {
+    height: auto;
+  }
+  .form-control:focus{
+    color: #557b95;
+    box-shadow: none;
+    border: 1px solid #557b95;
+  }
+}
+h2.not-home{
+  text-align: center;
+  background: $red-color;
+  margin-top: -25px;
+  padding: 10px 0;
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+a:hover{
+  text-decoration: none;
+}

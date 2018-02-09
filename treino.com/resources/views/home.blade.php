@@ -4,37 +4,50 @@
 @section('title', 'Inicio')
 
 @section('content')
-<div class="cursos-cortos container-fluid">
-  <h3>cursos <span>cortos</span></h3>
+@if ($tieneCursosCortos)
+  <div class="cursos-cortos container-fluid">
+    <h3>cursos <span>cortos</span></h3>
 
-  <button type="button" name="button" id="mas-cursos" class="ver-mas"></button>
-</div>
-<div id="id-cursos" class="cursos">
-  <div id="1" class="img-curso" style="background: url(images/curso.jpg) center center;">
-    PRUEBA
+    <button type="button" name="button" id="mas-cursos" class="ver-mas"></button>
   </div>
-  <div id="2" class="img-curso" style="background: url(images/curso.jpg) center center;">
-    PRUEBA
+  <div id="id-cursos-cortos" class="cursos">
+      @foreach ($cursosCortos as $curso)
+        <a href="#">
+          <div
+            @foreach ($curso as $key => $value)
+              @if ($key == 'id')
+                {!!"id = $value class='img-curso'"!!}
+              @endif
+              @if ($key == 'url-img')
+                {!!" style = 'background: url($value) center center';>"!!}
+              @endif
+              @if ($key == 'tipo')
+                <h4> {{$value}} </h4>
+              @endif
+              @if ($key == 'titulo')
+                <h3> {{$value}} </h3>
+              @endif
+              @if ($key == 'fecha')
+                <div class="info-curso">
+                  <p> <strong>{{$value}} </strong></p>
+              @endif
+              @if ($key == 'descripcion')
+                  <p> {{$value}} </p>
+                </div>
+              @endif
+            @endforeach
+          </div>
+        </a>
+      @endforeach
   </div>
-  <div id="3" class="img-curso" style="background: url(images/curso.jpg) center center;">
-    PRUEBA
-  </div>
-  <div id="4" class="img-curso" style="background: url(images/curso.jpg) center center;">
-    PRUEBA
-  </div>
-  <div id="5" class="img-curso" style="background: url(images/curso.jpg) center center;">
-    PRUEBA
-  </div>
-</div>
+@endif
 
-
-<div id="inicio" class="inicio container-fluid">
+<div id="section-escuela" class="inicio container-fluid">
   <div class="container">
     <div class="col-lg-12">
       <h3>{!!array_get($homeData, 'home_1.titulo') !!}</h3>
       <p>{!! array_get($homeData, 'home_1.contenido') !!}</p>
-      <a href="#" class="btn btn-contacto">CONTACTO / INSCRIPCIONES</a>
-      <!--<button type="button" class="btn btn-contacto" name="button"></button>-->
+      <a href="#" class="btn btn-contacto" data-toggle="modal" data-target="#section-contacto">CONTACTO / INSCRIPCIONES</a>
     </div>
 
     @for ($i = 2; $i <= 4; $i++)
@@ -49,7 +62,7 @@
   </div>
 </div>
 
-<div id="staff" class="staff">
+<div id="section-staff" class="staff">
   <div class="container">
     <div class="col-lg-12 text-center">
       <h3>NUESTRO STAFF</h3>
@@ -69,43 +82,43 @@
     </div>
   </div>
 </div>
-
+<div class="inscripcion container-fluid hidden-xs">
+  <div class="container">
+    <h5>
+      Pagá la inscripción a tus cursos de forma sencilla y online
+      <a href="#" class="btn btn-inscribite"  data-toggle="modal" data-target="#section-inscripcion">En este sitio!</a>
+    </h5>
+  </div>
+</div>
 @endsection
+
+
 
 @section('pie')
-  <div class="pie-cont col-sm-4 text-left">
-    <h4>BLOG</h4>
-    <ul class="blog">
-      @foreach ($entradas as $entrada)
-        <li>
-          @foreach ($entrada as $key => $value)
-            @if ($key == 'titulo')
-              <h6>{!!$value!!}</h6>
-            @endif
-            @if ($key == 'mini_contenido')
-              <p>{!!$value!!}</p>
-            @endif
-            @if ($key == 'imagen')
-              <img src="{{$value}}" alt="" class="img-responsive">
-            @endif
-            @if ($key == 'url')
-              <a href="blog/{{$value}}">Ver nota</a>
-            @endif
-          @endforeach
-        </li>
-      @endforeach
-    </ul>
-  </div>
-  <div class="pie-cont col-sm-4 text-center">
-    <img src="images/logo-pie.png" alt="" class="img-responsive img-logo-pie">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-    <div class="block-social">
-      <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-      <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
-      <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+    <div class="pie-cont col-sm-4 text-left">
+      <h4>ULTIMOS POST</h4>
     </div>
-  </div>
-  <div class="pie-cont col-sm-4 text-center">
-    OPINIONES
-  </div>
+    <div class="pie-cont col-sm-4 text-center">
+      <img src="images/logo-pie.png" alt="" class="img-responsive img-logo-pie">
+      <h3>Formá parte de nuestra escuela.</h3>
+      <div class="block-social">
+        <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="pie-cont col-sm-4 text-left">
+      <h4>NUESTROS ALUMNOS</h4>
+      <div class="opiniones" id="opiniones">
+        @foreach ($opiniones as $opinion)
+          <div class="opinion">
+            <p>"{!!array_get($opinion, 'opinion') !!}"</p>
+            <h5>{!!array_get($opinion, 'alumno') !!}</h5>
+            <h6>{!!array_get($opinion, 'curso') !!}</h6>
+          </div>
+        @endforeach
+      </div>
+    </div>
 @endsection
+
+@include('contacto.form-inscripciones')

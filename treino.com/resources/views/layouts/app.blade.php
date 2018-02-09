@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta id="token" name="token" content="{{ csrf_token() }}">
 
         <title>Treino - @yield('title')</title>
 
@@ -11,6 +12,14 @@
 
     </head>
     <body>
+        @if (session('status'))
+            <div class="alert alert-success msg">
+              {!! array_get(session('status'), 'mail')  !!}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        @endif
 
         <header class="hidden-xs container-fluid nav-contact">
           <div class="container">
@@ -24,15 +33,6 @@
             @yield('content')
         </section>
 
-        <div class="inscripcion container-fluid hidden-xs">
-          <div class="container">
-            <h5>
-              Pagá la inscripción a tus cursos de forma sencilla y online
-              <a href="#" class="btn btn-inscribite pull-right">En este sitio!</a>
-            </h5>
-          </div>
-        </div>
-
         <section class="pie container">
             @yield('pie')
         </section>
@@ -43,7 +43,12 @@
           </div>
         </footer>
 
+        @include('contacto.form')
+
         <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+        <script src="js/bootstrap.min.js" charset="utf-8"></script>
+        @include ('footer')
         <script src="js/main.js" charset="utf-8"></script>
+
     </body>
 </html>

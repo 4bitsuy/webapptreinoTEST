@@ -14,6 +14,7 @@ class ComposerStaticInit366841b4c7e56a6dfefc623f97c36bc2
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
+        '6292c1671f9440c89e0af20a0f78754a' => __DIR__ . '/..' . '/laracasts/utilities/src/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
     );
@@ -76,6 +77,7 @@ class ComposerStaticInit366841b4c7e56a6dfefc623f97c36bc2
         array (
             'League\\Flysystem\\' => 17,
             'Laravel\\Tinker\\' => 15,
+            'Laracasts\\Utilities\\JavaScript\\' => 31,
         ),
         'I' => 
         array (
@@ -237,6 +239,10 @@ class ComposerStaticInit366841b4c7e56a6dfefc623f97c36bc2
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
+        'Laracasts\\Utilities\\JavaScript\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laracasts/utilities/src',
+        ),
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
@@ -351,14 +357,23 @@ class ComposerStaticInit366841b4c7e56a6dfefc623f97c36bc2
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+        'App\\Http\\Controllers\\BlogController' => __DIR__ . '/../..' . '/app/Http/Controllers/BlogController.php',
+        'App\\Http\\Controllers\\ContactoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\CursosController' => __DIR__ . '/../..' . '/app/Http/Controllers/CursosController.php',
+        'App\\Http\\Controllers\\EscuelaController' => __DIR__ . '/../..' . '/app/Http/Controllers/EscuelaController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
+        'App\\Http\\Middleware\\GenerateMenus' => __DIR__ . '/../..' . '/app/Http/Middleware/GenerateMenus.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\linkWP\\Posts' => __DIR__ . '/../..' . '/app/Models/linkWP/Posts.php',
+        'App\\Models\\linkWP\\RelTaxPosts' => __DIR__ . '/../..' . '/app/Models/linkWP/RelTaxPosts.php',
+        'App\\Models\\linkWP\\Taxonomy' => __DIR__ . '/../..' . '/app/Models/linkWP/Taxonomy.php',
+        'App\\Models\\linkWP\\Terms' => __DIR__ . '/../..' . '/app/Models/linkWP/Terms.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -1823,6 +1838,17 @@ class ComposerStaticInit366841b4c7e56a6dfefc623f97c36bc2
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+        'Laracasts\\Utilities\\JavaScript\\JavaScriptFacade' => __DIR__ . '/..' . '/laracasts/utilities/src/JavaScriptFacade.php',
+        'Laracasts\\Utilities\\JavaScript\\JavaScriptServiceProvider' => __DIR__ . '/..' . '/laracasts/utilities/src/JavaScriptServiceProvider.php',
+        'Laracasts\\Utilities\\JavaScript\\LaravelViewBinder' => __DIR__ . '/..' . '/laracasts/utilities/src/LaravelViewBinder.php',
+        'Laracasts\\Utilities\\JavaScript\\Transformers\\ArrayTransformer' => __DIR__ . '/..' . '/laracasts/utilities/src/Transformers/ArrayTransformer.php',
+        'Laracasts\\Utilities\\JavaScript\\Transformers\\BooleanTransformer' => __DIR__ . '/..' . '/laracasts/utilities/src/Transformers/BooleanTransformer.php',
+        'Laracasts\\Utilities\\JavaScript\\Transformers\\NullTransformer' => __DIR__ . '/..' . '/laracasts/utilities/src/Transformers/NullTransformer.php',
+        'Laracasts\\Utilities\\JavaScript\\Transformers\\NumericTransformer' => __DIR__ . '/..' . '/laracasts/utilities/src/Transformers/NumericTransformer.php',
+        'Laracasts\\Utilities\\JavaScript\\Transformers\\ObjectTransformer' => __DIR__ . '/..' . '/laracasts/utilities/src/Transformers/ObjectTransformer.php',
+        'Laracasts\\Utilities\\JavaScript\\Transformers\\StringTransformer' => __DIR__ . '/..' . '/laracasts/utilities/src/Transformers/StringTransformer.php',
+        'Laracasts\\Utilities\\JavaScript\\Transformers\\Transformer' => __DIR__ . '/..' . '/laracasts/utilities/src/Transformers/Transformer.php',
+        'Laracasts\\Utilities\\JavaScript\\ViewBinder' => __DIR__ . '/..' . '/laracasts/utilities/src/ViewBinder.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
