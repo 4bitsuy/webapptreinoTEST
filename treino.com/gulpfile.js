@@ -1,12 +1,12 @@
 /*
 * Dependencias
 */
- var gulp = require('gulp'),
-   concat = require('gulp-concat'),
-   uglify = require('gulp-uglify'),
-     sass = require('gulp-sass'),
-   jquery = require('jquery');
-//bootstrap = require('bootstrap-sass');
+var gulp = require('gulp'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+    sass = require('gulp-sass'),
+  jquery = require('jquery'),
+convertEncoding = require('gulp-convert-encoding');
 
 // carpetas de destino y fuente
 var source = 'resources/assets/',
@@ -29,7 +29,7 @@ var scss = {
     out: dest + 'css/',
     watch: source + 'sass/**/*',
     sassOpts: {
-        outputStyle: 'nested',
+        outputStyle: 'compressed',
         precison: 3,
         errLogToConsole: true,
         includePaths: [bootstrapSass.in + 'assets/stylesheets']
@@ -39,7 +39,9 @@ var scss = {
 var javascript = {
   in: source + 'js/*.js',
   out: dest + 'js/',
-  concat: 'main.js'
+  watch: source + 'js/**/*',
+  concat: 'main.js',
+  encode: 'utf8'
 }
 
 // copy bootstrap required fonts to dest
@@ -60,16 +62,13 @@ gulp.task('sass', ['fonts'], function () {
 gulp.task('js', function () {
     gulp.src(javascript.in)
     .pipe(concat(javascript.concat))
+    .pipe(convertEncoding({to: javascript.encode}))
     .pipe(uglify())
     .pipe(gulp.dest(javascript.out));
 });
 
 // default task
-gulp.task('default', ['sass'], function () {
+gulp.task('default', ['sass','js'], function () {
      gulp.watch(scss.watch, ['sass']);
-});
-
-// default task
-gulp.task('espera', ['js'], function () {
-     gulp.watch(scss.watch, ['js']);
+     gulp.watch(javascript.watch, ['js']);
 });

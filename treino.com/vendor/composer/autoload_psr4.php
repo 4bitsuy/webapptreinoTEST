@@ -11,8 +11,6 @@ return array(
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'TijsVerkoyen\\CssToInlineStyles\\' => array($vendorDir . '/tijsverkoyen/css-to-inline-styles/src'),
-    'Thunder\\Shortcode\\Tests\\' => array($vendorDir . '/thunderer/shortcode/tests'),
-    'Thunder\\Shortcode\\' => array($vendorDir . '/thunderer/shortcode/src'),
     'Tests\\' => array($baseDir . '/tests'),
     'Symfony\\Thanks\\' => array($vendorDir . '/symfony/thanks/src'),
     'Symfony\\Polyfill\\Php70\\' => array($vendorDir . '/symfony/polyfill-php70'),
@@ -46,8 +44,6 @@ return array(
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Common/Inflector'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Cron\\' => array($vendorDir . '/mtdowling/cron-expression/src/Cron'),
-    'Corcel\\Tests\\' => array($vendorDir . '/jgrossi/corcel/tests'),
-    'Corcel\\' => array($vendorDir . '/jgrossi/corcel/src'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'App\\' => array($baseDir . '/app'),
 );

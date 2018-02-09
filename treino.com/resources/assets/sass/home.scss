@@ -29,22 +29,6 @@ div.inicio{
       }
     }
   }
-  a.btn-contacto{
-    background: $red-color!important;
-    border-radius: 0!important;
-    color: $white-color!important;
-    font-weight: $font-sans-bold;
-    letter-spacing: 1px;
-    margin-top: 50px;
-    margin-bottom: 130px;
-    padding: 8px 28px;
-    @include media(xxs){
-      font-size: 14px;
-    }
-    @include media(sm){
-      font-size: 18px;
-    }
-  }
   img.icono-home{
     padding-top: 20px;
     position: absolute;
@@ -76,3 +60,56 @@ div.inicio{
 }
 
 @import "staff-home";
+.opiniones{
+  .slick-slide{
+    height: auto!important;
+  }
+  .opinion{
+    p{
+      background: $red-color;
+      min-height: 390px;
+      @include media(xxs){
+        font-family: 'Courgette', cursive;
+        padding: 25px;
+        font-size: 15px;
+        line-height: 21px;
+      }
+      @include media(sm){
+        font-size: 12px;
+        padding: 20px;
+        margin: 5px 10px;
+      }
+      @include media(md){
+        font-family: 'Courgette', cursive;
+        padding: 25px;
+        font-size: 15px;
+        line-height: 21px;
+        margin: 10px 20px;
+      }
+    }
+    h5,h6{
+      display: inline-block;
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    h5{
+      color: $red-color;
+    }
+    h6::before{
+      content: "- ";
+    }
+  }
+  ul.slick-dots{
+    li.slick-active{
+      button::before{
+        color: #fff;
+      }
+    }
+    li{
+      button::before{
+        color: #f5d3d8;
+      }
+    }
+  }
+}

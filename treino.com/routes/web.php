@@ -23,9 +23,15 @@ Route::get('cursos', [
   'as'    => 'cursos.principal',
   'uses'  => 'CursosController@index'
 ]);
-Route::get('contacto', [
-  'as'    => 'contacto.principal',
-  'uses'  => 'ContactoController@index'
+Route::post('cursos', 'CursosController@getInfoCurso');
+
+Route::post('contacto', 'ContactoController@enviarCorreo');
+Route::post('inscripcion', 'ContactoController@enviarCorreoInscripcion');
+Route::post('contacto-curso', 'ContactoController@enviarCorreoCurso');
+
+Route::get('blog', [
+  'as'    => 'blog.principal',
+  'uses'  => 'BlogController@index'
 ]);
 
 Route::get('blog/{entrada}', [

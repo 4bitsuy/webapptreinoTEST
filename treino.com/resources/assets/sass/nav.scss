@@ -25,10 +25,9 @@ nav.navbar-default{
   // for mobile
   .navbar-default .navbar-toggle .icon-bar{
     background-color: $red-color;
-
+    }
   }
   .navbar-toggle:hover,
   .navbar-toggle:focus{
     background-color: transparent!important;
   }
-}

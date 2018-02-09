@@ -32,19 +32,88 @@ div.cursos-cortos{
 div.img-curso{
   background-size: cover;
   position: absolute;
-  top: 103px;
-  width: 88%;
-  right: 0;
   height: 50px;
   transition: .5s all;
   @include media(xxs){
     padding-bottom: 270px;
+    top: 103px;
+    width: 88%;
   }
   @include media(xs){
     padding-bottom: 400px;
   }
+  @include media(sm){
+    top: 133px;
+    width: 360px;
+  }
   @include media(md){
     top: 133px;
     width: 460px;
+  }
+  h3,h4{
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+  h3{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    height: 88px;
+    @include media(xxs){
+      font-size: 24px;
+      margin: 0 15px 0 35px;
+    }
+    @include media(xs){
+      font-size: 40px;
+      margin: 0 15px 0 100px;
+    }
+    @include media(sm){
+      margin-left: 75px;
+    }
+    @include media(md){
+      font-size: 40px;
+      margin-left: 100px;
+    }
+  }
+  h4{
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1px;
+    height: 19px;
+    margin-right: 15px;
+    margin-bottom: 0;
+    @include media(xxs){
+      margin-top: 95px;
+      font-size: 14px;
+    }
+    @include media(xs){
+      margin-top: 170px;
+      font-size: 16px;
+    }
+  }
+  div.info-curso{
+    font-family: 'Roboto Condensed', sans-serif;
+    background: -webkit-linear-gradient(rgba(7,8,35,1) 0%, rgba(7,8,35,0) 100%);
+    background: -o-linear-gradient(rgba(7,8,35,1) 0%, rgba(7,8,35,0) 100%);
+    background: linear-gradient(rgba(7,8,35,1) 0%, rgba(7,8,35,0) 100%);
+    opacity: 0;
+    transition: .5s all;
+    padding: 30px 25px;
+    @include media(xxs){
+      height: 90px;
+      margin-top: -201px;
+    }
+    @include media(sm){
+      height: 150px;
+      margin-top: 277px;
+    }
+    @include media(md){
+      margin-top: -277px;
+    }
+  }
+}
+
+div.img-curso:hover, div.img-curso:focus{
+  div.info-curso{
+    opacity: 1;
   }
 }
