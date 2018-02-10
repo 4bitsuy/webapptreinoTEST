@@ -8,9 +8,11 @@ Corcel
 [![Travis](https://travis-ci.org/corcel/corcel.svg?branch=master)](https://travis-ci.org/corcel/corcel?branch=master)
 [![Packagist](https://img.shields.io/packagist/v/jgrossi/corcel.svg)](https://packagist.org/packages/jgrossi/corcel)
 [![Packagist](https://img.shields.io/packagist/dt/jgrossi/corcel.svg)](https://github.com/jgrossi/corcel/releases)
-[![Coverage Status](https://coveralls.io/repos/github/corcel/corcel/badge.svg?branch=master)](https://coveralls.io/github/corcel/corcel?branch=master)
+[![Test Coverage](https://codeclimate.com/github/corcel/corcel/badges/coverage.svg)](https://codeclimate.com/github/corcel/corcel/coverage)
 
-<a href='https://ko-fi.com/A36513JF' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+<a href="https://ko-fi.com/A36513JF" target="_blank">
+  <img height="36" style="border:0px;height:36px;" src="https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0" border="0" alt="Buy Me a Coffee at ko-fi.com" />
+</a>
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/corcelphp.svg?style=social&label=Follow)](http://twitter.com/CorcelPHP)
 
@@ -584,19 +586,19 @@ To get a menu by its slug, use the syntax below. The menu items will be loaded i
 
 The currently supported menu items are: Pages, Posts, Custom Links and Categories.
 
-Once you'll have instances of `MenuItem` class, if you want to use the original instance (like the original Page or Term, for example), just call the `MenuItem::instance()` method. The `MenuItem` object is just a post with `post_type` equals `nav_menu_item`:
+Once you'll have instances of `MenuItem` class, if you want to use the original instance (like the original Page or Term, for example), just access the `MenuItem::object()` relation. The `MenuItem` object is just a post with `post_type` equals `nav_menu_item`:
 
 ```php
 $menu = Menu::slug('primary')->first();
 
 foreach ($menu->items as $item) {
-    echo $item->instance()->title; // if it's a Post
-    echo $item->instance()->name; // if it's a Term
-    echo $item->instance()->link_text; // if it's a custom link
+    echo $item->object->title; // if it's a Post
+    echo $item->object->name; // if it's a Term
+    echo $item->object->link_text; // if it's a custom link
 }
 ```
 
-The `instance()` method will return the matching object:
+`object` will return the matching object:
 
 - `Post` instance for `post` menu item;
 - `Page` instance for `page` menu item;
